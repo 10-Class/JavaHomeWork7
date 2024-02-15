@@ -22,7 +22,8 @@ public class HomeWork7 {
         /* *3. Напишите функцию которая поменяет порядок элементов массива
         public static void reverse(int [] a)
         {1,3,10,12} -> {12, 10, 3, 1} */
-        //reverse(ArrayElements);
+        int[] reversMas = {1,3,10,12};
+        reverse(reversMas);
 
     }//main
 
@@ -53,11 +54,10 @@ public class HomeWork7 {
     }
 
     // 3
-    /*public static void reverse(int [] a){
-        Arrays.sort(a, Collections.reverseOrder());
-        for (int i = 0; i < a.length; i++) {
+    public static void reverse(int [] a){
+        for (int i = a.length -1; i >= 0; i--) {
             System.out.println(a[i]);
         }
-    }*/
+    }
 
 }
