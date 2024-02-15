@@ -9,7 +9,9 @@ public class HomeWork7 {
         public static void makeArrayElementsPositive(int [] a)
         {1,-4, 2, -7, 12} -> {1,4, 2, 7, 12} */
         int[] ArrayElements = {1, -4, 2, -7, 12};
+        System.out.println(Arrays.toString(ArrayElements));
         makeArrayElementsPositive(ArrayElements);
+        System.out.println(Arrays.toString(ArrayElements));
 
         /* 2. Напишите функцию которая вернет true если в массиве есть отрицательные элементы
         public static boolean hasNegative(int [] a)
@@ -22,29 +24,26 @@ public class HomeWork7 {
         /* *3. Напишите функцию которая поменяет порядок элементов массива
         public static void reverse(int [] a)
         {1,3,10,12} -> {12, 10, 3, 1} */
-        int[] reversMas = {1,3,10,12};
+        int[] reversMas = {1, 3, 10, 12};
+        System.out.println(Arrays.toString(reversMas));
         reverse(reversMas);
+        System.out.println(Arrays.toString(reversMas));
+
 
     }//main
 
     // 1 Сделал как смог.
     public static void makeArrayElementsPositive(int[] a) {
-        int g1 = 0;
         for (int i = 0; i < a.length; i++) {
-            g1 = a[i];
-            if (a[i] > 0) {
-                System.out.println(g1);
-            }
             if (a[i] < 0) {
-                int g = a[i] * (-1);
-                System.out.println(g);
+                a[i] = -a[i];
             }
         }
 
     }
 
     // 2
-    public static boolean hasNegative(int [] a){
+    public static boolean hasNegative(int[] a) {
         for (int i = 0; i < a.length; i++) {
             if (a[i] < 0) {
                 return true;
@@ -54,9 +53,11 @@ public class HomeWork7 {
     }
 
     // 3
-    public static void reverse(int [] a){
-        for (int i = a.length -1; i >= 0; i--) {
-            System.out.println(a[i]);
+    public static void reverse(int[] a) {
+        for (int i = 0; i < a.length / 2; i++) {
+            int temp = a[i];
+            a[i] = a[a.length - 1 - i];
+            a[a.length - 1 - i] = temp;
         }
     }
 
